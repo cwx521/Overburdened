@@ -1,0 +1,24 @@
+﻿@model ResultViewModel
+
+<ul style="line-height: 160%">
+	<li>
+		Original Stock Number:
+		<b>@Model.StartStockCount</b>
+	</li>
+	<li>
+		Executed Times (-1 for each):
+		<b>@Model.ExecutedTimes</b>
+	</li>
+	<li>
+		Then Read Stock Number:
+		<b>@Model.ReadStockCount</b>
+	</li>
+	<li>
+		Is Result Number Correct:
+		<b><span style="color: @(@Model.IsCorrectResult ? "green" : "red")">@Model.IsCorrectResult</span></b>
+	</li>
+	<li>
+		Took Time:
+		<b>@Model.ExecutedDuration.ToString()</b>
+	</li>
+</ul>
